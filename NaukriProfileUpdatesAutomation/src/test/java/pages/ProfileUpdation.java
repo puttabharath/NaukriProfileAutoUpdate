@@ -52,7 +52,7 @@ public class ProfileUpdation {
 		updateResume.click();
 
 		// Upload file using sendKeys
-		String filePath = "C:\\Users\\bharath\\git\\NaukriProfileAutoUpdate\\NaukriProfileUpdatesAutomation\\src\\test\\java\\testData\\Resume\\Bharath Kumar Putta Resume.pdf";
+		String filePath = "C:\\Users\\bharath\\git\\NaukriProfileAutoUpdate\\NaukriProfileUpdatesAutomation\\src\\test\\java\\testData\\Resume\\Bharath_Kumar_Resume.pdf";
 		fileUploadInput.sendKeys(filePath);
 
 		// Wait for upload to complete
