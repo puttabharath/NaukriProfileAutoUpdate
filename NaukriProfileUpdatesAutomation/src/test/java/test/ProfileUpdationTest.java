@@ -5,11 +5,13 @@ import pages.BaseClass;
 import pages.LoginPage;
 import pages.ProfileUpdation;
 import utils.ConfigReader;
+import listeners.*;
 
 
 public class ProfileUpdationTest extends BaseClass{
 	
-	@Test(priority = 2,description = "Verify the functionality by adding and removing the resume file in Profile section")
+	@Test(priority = 2, retryAnalyzer = RetryAnalyzer.class, 
+			description = "Verify the functionality by adding and removing the resume file in Profile section")
 	public void profileUpdate() throws Throwable
 	{
         LoginPage loginPage = new LoginPage(driver);

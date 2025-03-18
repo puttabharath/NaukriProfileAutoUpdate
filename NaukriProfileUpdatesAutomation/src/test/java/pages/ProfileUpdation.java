@@ -1,8 +1,8 @@
 package pages;
 
 import java.time.Duration;
-
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -41,10 +41,16 @@ public class ProfileUpdation {
 		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		WebElement moreOptions = wait.until(ExpectedConditions.elementToBeClickable(threeDots));
 		moreOptions.click();
-
-		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='View & Update Profile']")));
+		try {
+			WebElement chatWindow = driver.findElement(By.id("chatList__9cf184asaMessages"));
+			((JavascriptExecutor) driver).executeScript("arguments[0].style.display='none';", chatWindow);
+		} catch (Exception e) {
+			System.out.println("No chat window found");
+		}
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebElement element = wait
+				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='View & Update Profile']")));
 		element.click();
-
 		deleteIcon.click();
 		deletePopupBtn.click();
 
@@ -52,7 +58,7 @@ public class ProfileUpdation {
 		updateResume.click();
 
 		// Upload file using sendKeys
-		String filePath = "C:\\Users\\bharath\\git\\NaukriProfileAutoUpdate\\NaukriProfileUpdatesAutomation\\src\\test\\java\\testData\\Resume\\Bharath Kumar Putta Resume.pdf";
+		String filePath = "C:\\NaukriApp\\NaukriProfileAutoUpdate\\NaukriProfileUpdatesAutomation\\src\\test\\java\\testData\\Resume\\Bharath Kumar Putta Resume.pdf";
 		fileUploadInput.sendKeys(filePath);
 
 		// Wait for upload to complete

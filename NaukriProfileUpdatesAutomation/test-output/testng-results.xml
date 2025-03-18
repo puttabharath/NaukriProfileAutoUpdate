@@ -1,25 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-28T01:46:54 IST" name="Default suite" finished-at="2025-02-28T01:47:08 IST" duration-ms="13501">
+  <suite started-at="2025-03-18T21:41:21 IST" name="Suite" finished-at="2025-03-18T21:42:15 IST" duration-ms="53916">
     <groups>
     </groups>
-    <test started-at="2025-02-28T01:46:54 IST" name="Default test" finished-at="2025-02-28T01:47:08 IST" duration-ms="13501">
-      <class name="test.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.LoginTest@1133ec6e]" started-at="2025-02-28T01:46:55 IST" name="setup" finished-at="2025-02-28T01:47:03 IST" duration-ms="8428" status="PASS">
+    <test started-at="2025-03-18T21:41:21 IST" name="Test" finished-at="2025-03-18T21:42:15 IST" duration-ms="53916">
+      <class name="test.skillUpdateTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.skillUpdateTest@34b9f960]" started-at="2025-03-18T21:42:04 IST" name="setup" finished-at="2025-03-18T21:42:07 IST" duration-ms="2664" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testLogin()[pri:0, instance:test.LoginTest@1133ec6e]" started-at="2025-02-28T01:47:03 IST" name="testLogin" finished-at="2025-02-28T01:47:08 IST" duration-ms="4637" status="PASS">
+        <test-method signature="skillUpdationTest()[pri:3, instance:test.skillUpdateTest@34b9f960]" started-at="2025-03-18T21:42:07 IST" name="skillUpdationTest" description="Verify the functionality by removing and adding the any skill in the Skills Section" finished-at="2025-03-18T21:42:14 IST" duration-ms="7270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- skillUpdationTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.skillUpdateTest@34b9f960]" started-at="2025-03-18T21:42:14 IST" name="teardown" finished-at="2025-03-18T21:42:15 IST" duration-ms="110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- test.skillUpdateTest -->
+      <class name="test.ResumeHeadlineTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.ResumeHeadlineTest@27912e3]" started-at="2025-03-18T21:41:53 IST" name="setup" finished-at="2025-03-18T21:41:56 IST" duration-ms="2845" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="resumeHeadlineTest()[pri:4, instance:test.ResumeHeadlineTest@27912e3]" started-at="2025-03-18T21:41:56 IST" name="resumeHeadlineTest" description="Verify the functionality by removing and adding the resume headline text" finished-at="2025-03-18T21:42:03 IST" duration-ms="7116" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resumeHeadlineTest -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ResumeHeadlineTest@27912e3]" started-at="2025-03-18T21:42:04 IST" name="teardown" finished-at="2025-03-18T21:42:04 IST" duration-ms="159" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- test.ResumeHeadlineTest -->
+      <class name="test.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.LoginTest@6531a794]" started-at="2025-03-18T21:41:21 IST" name="setup" finished-at="2025-03-18T21:41:25 IST" duration-ms="4151" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testLogin()[pri:0, instance:test.LoginTest@6531a794]" started-at="2025-03-18T21:41:25 IST" name="testLogin" finished-at="2025-03-18T21:41:28 IST" duration-ms="2911" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.LoginTest@1133ec6e]" started-at="2025-02-28T01:47:08 IST" name="teardown" finished-at="2025-02-28T01:47:08 IST" duration-ms="367" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.LoginTest@6531a794]" started-at="2025-03-18T21:41:28 IST" name="teardown" finished-at="2025-03-18T21:41:28 IST" duration-ms="158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- test.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="test.ProfileUpdationTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.ProfileUpdationTest@74f6c5d8]" started-at="2025-03-18T21:41:28 IST" name="setup" finished-at="2025-03-18T21:41:31 IST" duration-ms="2834" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="profileUpdate()[pri:2, instance:test.ProfileUpdationTest@74f6c5d8]" started-at="2025-03-18T21:41:31 IST" name="profileUpdate" description="Verify the functionality by adding and removing the resume file in Profile section" finished-at="2025-03-18T21:41:52 IST" duration-ms="21009" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- profileUpdate -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ProfileUpdationTest@74f6c5d8]" started-at="2025-03-18T21:41:53 IST" name="teardown" finished-at="2025-03-18T21:41:53 IST" duration-ms="135" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- test.ProfileUpdationTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
