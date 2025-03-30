@@ -1,0 +1,39 @@
+package test;
+
+import org.testng.annotations.Test;
+
+import pages.BaseClass;
+import pages.LoginPage;
+import utils.ConfigReader;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LoginTest extends BaseClass{
+	LoginPage lp;
+	
+	@Test (description = "")
+	public void invalidUsernameVPassword() throws InterruptedException {
+	lp = new LoginPage(driver);
+	  String inValidusername = ConfigReader.getProperty("invalidUsername");
+      String password = ConfigReader.getProperty("password");
+	
+    lp.naukriLoginPortal(null, nu);
+	}
+	
+	
+    @Test (description = "Verify the functionality by giving valid username and password")
+    public void validLogin() throws InterruptedException {
+
+        // Create LoginPage object
+        lp = new LoginPage(driver);
+
+        // Fetch credentials from properties file
+        String username = ConfigReader.getProperty("username");
+        String password = ConfigReader.getProperty("password");
+
+        // Perform login
+        lp.naukriLoginPortal(username, password);
+    }
+    
+    
+}
