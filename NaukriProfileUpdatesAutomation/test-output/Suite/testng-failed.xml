@@ -6,6 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="test.skillUpdateTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="skillUpdationTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- test.skillUpdateTest -->
       <class name="test.ProfileUpdationTest">
         <methods>
           <include name="teardown"/>
@@ -13,6 +20,13 @@
           <include name="profileUpdate"/>
         </methods>
       </class> <!-- test.ProfileUpdationTest -->
+      <class name="test.ResumeHeadlineTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="resumeHeadlineTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- test.ResumeHeadlineTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

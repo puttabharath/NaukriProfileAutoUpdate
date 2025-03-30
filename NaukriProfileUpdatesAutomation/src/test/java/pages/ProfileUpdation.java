@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
 public class ProfileUpdation {
 	WebDriver driver;
@@ -38,6 +39,7 @@ public class ProfileUpdation {
 	private WebElement fileUploadInput;
 
 	public void profileUpdateModule() throws Throwable {
+		Reporter.log("Profile update module is initiated",true);
 		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		WebElement moreOptions = wait.until(ExpectedConditions.elementToBeClickable(threeDots));
 		moreOptions.click();
@@ -53,15 +55,16 @@ public class ProfileUpdation {
 		element.click();
 		deleteIcon.click();
 		deletePopupBtn.click();
+		Reporter.log("Resume got deleted",true);
 
 		WebElement updateResume = wait.until(ExpectedConditions.elementToBeClickable(updateResumeBtn));
 		updateResume.click();
-
 		// Upload file using sendKeys
 		String filePath = "C:\\NaukriApp\\NaukriProfileAutoUpdate\\NaukriProfileUpdatesAutomation\\src\\test\\java\\testData\\Resume\\Bharath Kumar Putta Resume.pdf";
 		fileUploadInput.sendKeys(filePath);
 
 		// Wait for upload to complete
 		Thread.sleep(2000);
+		Reporter.log("Updated latest Resume",true);
 	}
 }

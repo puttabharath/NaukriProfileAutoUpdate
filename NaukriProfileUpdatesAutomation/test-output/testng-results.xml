@@ -1,63 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Profile update module is initiated]]>
+    </line>
+    <line>
+      <![CDATA[Resume got deleted]]>
+    </line>
+    <line>
+      <![CDATA[Updated latest Resume]]>
+    </line>
   </reporter-output>
-  <suite started-at="2025-03-18T21:41:21 IST" name="Suite" finished-at="2025-03-18T21:42:15 IST" duration-ms="53916">
+  <suite started-at="2025-03-30T21:38:11 IST" name="Suite" finished-at="2025-03-30T21:39:13 IST" duration-ms="62351">
     <groups>
     </groups>
-    <test started-at="2025-03-18T21:41:21 IST" name="Test" finished-at="2025-03-18T21:42:15 IST" duration-ms="53916">
+    <test started-at="2025-03-30T21:38:11 IST" name="Test" finished-at="2025-03-30T21:39:13 IST" duration-ms="62351">
       <class name="test.skillUpdateTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.skillUpdateTest@34b9f960]" started-at="2025-03-18T21:42:04 IST" name="setup" finished-at="2025-03-18T21:42:07 IST" duration-ms="2664" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.skillUpdateTest@5e17553a]" started-at="2025-03-30T21:39:01 IST" name="setup" finished-at="2025-03-30T21:39:05 IST" duration-ms="4067" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="skillUpdationTest()[pri:3, instance:test.skillUpdateTest@34b9f960]" started-at="2025-03-18T21:42:07 IST" name="skillUpdationTest" description="Verify the functionality by removing and adding the any skill in the Skills Section" finished-at="2025-03-18T21:42:14 IST" duration-ms="7270" status="PASS">
+        <test-method signature="skillUpdationTest()[pri:3, instance:test.skillUpdateTest@5e17553a]" started-at="2025-03-30T21:39:05 IST" name="skillUpdationTest" description="Verify the functionality by removing and adding the any skill in the Skills Section" finished-at="2025-03-30T21:39:13 IST" duration-ms="7366" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- skillUpdationTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.skillUpdateTest@34b9f960]" started-at="2025-03-18T21:42:14 IST" name="teardown" finished-at="2025-03-18T21:42:15 IST" duration-ms="110" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.skillUpdateTest@5e17553a]" started-at="2025-03-30T21:39:13 IST" name="teardown" finished-at="2025-03-30T21:39:13 IST" duration-ms="169" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- test.skillUpdateTest -->
       <class name="test.ResumeHeadlineTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.ResumeHeadlineTest@27912e3]" started-at="2025-03-18T21:41:53 IST" name="setup" finished-at="2025-03-18T21:41:56 IST" duration-ms="2845" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.ResumeHeadlineTest@3b5fad2d]" started-at="2025-03-30T21:38:50 IST" name="setup" finished-at="2025-03-30T21:38:53 IST" duration-ms="3352" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="resumeHeadlineTest()[pri:4, instance:test.ResumeHeadlineTest@27912e3]" started-at="2025-03-18T21:41:56 IST" name="resumeHeadlineTest" description="Verify the functionality by removing and adding the resume headline text" finished-at="2025-03-18T21:42:03 IST" duration-ms="7116" status="PASS">
+        <test-method signature="resumeHeadlineTest()[pri:4, instance:test.ResumeHeadlineTest@3b5fad2d]" started-at="2025-03-30T21:38:53 IST" name="resumeHeadlineTest" description="Verify the functionality by removing and adding the resume headline text" finished-at="2025-03-30T21:39:01 IST" duration-ms="7654" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- resumeHeadlineTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ResumeHeadlineTest@27912e3]" started-at="2025-03-18T21:42:04 IST" name="teardown" finished-at="2025-03-18T21:42:04 IST" duration-ms="159" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ResumeHeadlineTest@3b5fad2d]" started-at="2025-03-30T21:39:01 IST" name="teardown" finished-at="2025-03-30T21:39:01 IST" duration-ms="373" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- test.ResumeHeadlineTest -->
       <class name="test.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.LoginTest@6531a794]" started-at="2025-03-18T21:41:21 IST" name="setup" finished-at="2025-03-18T21:41:25 IST" duration-ms="4151" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.LoginTest@a1f72f5]" started-at="2025-03-30T21:38:11 IST" name="setup" finished-at="2025-03-30T21:38:17 IST" duration-ms="5882" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="testLogin()[pri:0, instance:test.LoginTest@6531a794]" started-at="2025-03-18T21:41:25 IST" name="testLogin" finished-at="2025-03-18T21:41:28 IST" duration-ms="2911" status="PASS">
+        <test-method signature="validLogin()[pri:1, instance:test.LoginTest@a1f72f5]" started-at="2025-03-30T21:38:17 IST" name="validLogin" description="Verify the functionality by giving valid username and password" finished-at="2025-03-30T21:38:20 IST" duration-ms="2921" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.LoginTest@6531a794]" started-at="2025-03-18T21:41:28 IST" name="teardown" finished-at="2025-03-18T21:41:28 IST" duration-ms="158" status="PASS">
+        </test-method> <!-- validLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.LoginTest@a1f72f5]" started-at="2025-03-30T21:38:20 IST" name="teardown" finished-at="2025-03-30T21:38:20 IST" duration-ms="372" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- test.LoginTest -->
       <class name="test.ProfileUpdationTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.ProfileUpdationTest@74f6c5d8]" started-at="2025-03-18T21:41:28 IST" name="setup" finished-at="2025-03-18T21:41:31 IST" duration-ms="2834" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.ProfileUpdationTest@6531a794]" started-at="2025-03-30T21:38:20 IST" name="setup" finished-at="2025-03-30T21:38:26 IST" duration-ms="6263" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="profileUpdate()[pri:2, instance:test.ProfileUpdationTest@74f6c5d8]" started-at="2025-03-18T21:41:31 IST" name="profileUpdate" description="Verify the functionality by adding and removing the resume file in Profile section" finished-at="2025-03-18T21:41:52 IST" duration-ms="21009" status="PASS">
+        <test-method signature="profileUpdate()[pri:2, instance:test.ProfileUpdationTest@6531a794]" started-at="2025-03-30T21:38:26 IST" name="profileUpdate" description="Verify the functionality by adding and removing the resume file in Profile section" finished-at="2025-03-30T21:38:49 IST" duration-ms="22390" status="PASS">
           <reporter-output>
+            <line>
+              <![CDATA[Profile update module is initiated]]>
+            </line>
+            <line>
+              <![CDATA[Resume got deleted]]>
+            </line>
+            <line>
+              <![CDATA[Updated latest Resume]]>
+            </line>
           </reporter-output>
         </test-method> <!-- profileUpdate -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ProfileUpdationTest@74f6c5d8]" started-at="2025-03-18T21:41:53 IST" name="teardown" finished-at="2025-03-18T21:41:53 IST" duration-ms="135" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ProfileUpdationTest@6531a794]" started-at="2025-03-30T21:38:49 IST" name="teardown" finished-at="2025-03-30T21:38:50 IST" duration-ms="540" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

@@ -18,7 +18,7 @@ public class ExtentReporterNG {
         }
 
         // Get project directory dynamically
-  String reportDir = "C:\\Users\\bharath\\git\\NaukriProfileAutoUpdate\\NaukriProfileUpdatesAutomation\\reports\\";
+  String reportDir = "C:\\NaukriApp\\NaukriProfileAutoUpdate\\NaukriProfileUpdatesAutomation\\reports\\";
         File dir = new File(reportDir);
 
         // Ensure reports directory exists
@@ -31,7 +31,7 @@ public class ExtentReporterNG {
             }
         }
 
-        // Generate timestamped report file
+        // Generate time stamped report file
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
         String timestamp = LocalDateTime.now().format(formatter);
         String reportFile = "Naukri_Auto_Update_Profile_" + timestamp + ".html";
@@ -56,14 +56,17 @@ public class ExtentReporterNG {
         System.out.println("✅ Extent Reports initialized at: " + reportPath);
 
         // Copy latest report as 'latest.html' for easy access
-        try {
+        try 
+          {
             Path latestReportPath = Paths.get(reportDir + "latest.html");
             Files.deleteIfExists(latestReportPath);
             Files.copy(Paths.get(reportPath), latestReportPath, StandardCopyOption.REPLACE_EXISTING);
             System.out.println("✅ Latest report copied to: " + latestReportPath);
-        } catch (IOException e) {
+          } 
+        catch (IOException e)
+          {
             System.err.println("❌ Could not create latest.html file: " + e.getMessage());
-        }
+          }
 
         return extent;
     }

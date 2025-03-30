@@ -1,6 +1,8 @@
 package test;
 
 import org.testng.annotations.Test;
+
+import listeners.RetryAnalyzer;
 import pages.BaseClass;
 import pages.LoginPage;
 import pages.skillsUpdate;
@@ -8,7 +10,7 @@ import utils.ConfigReader;
 
 public class skillUpdateTest extends BaseClass{
 	
-	@Test(priority = 3,description = "Verify the functionality by removing and adding the any skill in the Skills Section")
+	@Test(priority = 3,description = "Verify the functionality by removing and adding the any skill in the Skills Section", retryAnalyzer = RetryAnalyzer.class)
 	public void skillUpdationTest() throws Throwable
 	{
 		 LoginPage loginPage = new LoginPage(driver);
