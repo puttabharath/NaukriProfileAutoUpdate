@@ -64,7 +64,7 @@ public class ExtentReporterNG {
             
             // Ensure file is created before Jenkins picks it up
             try {
-                Thread.sleep(6000); // Small delay to ensure file writing completes
+                Thread.sleep(20000); // Small delay to ensure file writing completes
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
