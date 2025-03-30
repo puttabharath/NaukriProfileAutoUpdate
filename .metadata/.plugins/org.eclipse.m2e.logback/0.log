@@ -299,3 +299,190 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: unexpected 
 	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:654)
 	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:93)
 	... 26 common frames omitted
+2025-03-30 22:09:05,196 [Worker-7: Periodic workspace save.] ERROR o.e.m.c.i.p.r.ProjectRegistryReader - Can't write workspace state
+java.io.FileNotFoundException: C:\NaukriApp\NaukriProfileAutoUpdate\.metadata\.plugins\org.eclipse.m2e.core\workspaceState.ser (The system cannot find the path specified)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:289)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:230)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:179)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryReader.createObjectOutputStream(ProjectRegistryReader.java:127)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryReader.writeWorkspaceState(ProjectRegistryReader.java:116)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.writeWorkspaceState(ProjectRegistryManager.java:1047)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.saving(ProjectRegistryManager.java:1198)
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:453)
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:269)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:272)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1226)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1205)
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-03-30 22:12:39,017 [Worker-29: Building] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Could not read pom.xml
+org.eclipse.core.runtime.CoreException: Could not read pom.xml
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:245)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refreshPhase2(ProjectRegistryManager.java:591)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:491)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:370)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:322)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:146)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:84)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:83)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:192)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.apache.maven.model.io.ModelParseException: unexpected character in markup < (position: END_TAG seen ...</dependency>\r\n<<... @110:3) 
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:96)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:74)
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readModel(IMavenToolbox.java:243)
+	... 24 common frames omitted
+Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: unexpected character in markup < (position: END_TAG seen ...</dependency>\r\n<<... @110:3) 
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextImpl(MXParser.java:1582)
+	at org.codehaus.plexus.util.xml.pull.MXParser.next(MXParser.java:1375)
+	at org.codehaus.plexus.util.xml.pull.MXParser.nextTag(MXParser.java:1357)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.parseModel(MavenXpp3Reader.java:2317)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:623)
+	at org.apache.maven.model.io.xpp3.MavenXpp3Reader.read(MavenXpp3Reader.java:654)
+	at org.apache.maven.model.io.DefaultModelReader.read(DefaultModelReader.java:93)
+	... 26 common frames omitted
+2025-03-30 22:12:47,577 [Worker-29: reload maven project] ERROR o.e.m.c.i.p.r.ProjectRegistryManager - Failed to read Maven project: Some problems were encountered while processing the POMs:
+[FATAL] Non-parseable POM C:\NaukriApp\NaukriProfileAutoUpdate\NaukriProfileUpdatesAutomation\pom.xml: unexpected character in markup < (position: END_TAG seen ...</dependency>\r\n<<... @110:3)  @ line 110, column 3
+
+org.apache.maven.project.ProjectBuildingException: Some problems were encountered while processing the POMs:
+[FATAL] Non-parseable POM C:\NaukriApp\NaukriProfileAutoUpdate\NaukriProfileUpdatesAutomation\pom.xml: unexpected character in markup < (position: END_TAG seen ...</dependency>\r\n<<... @110:3)  @ line 110, column 3
+
+	at org.eclipse.m2e.core.internal.IMavenToolbox.readMavenProjects(IMavenToolbox.java:140)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.lambda$22(ProjectRegistryManager.java:943)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectsWithDependencies(ProjectRegistryManager.java:939)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.create(ProjectRegistryManager.java:219)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectManager.create(MavenProjectManager.java:105)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:239)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:709)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$4.run(MavenPomEditor.java:1029)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2025-03-30 22:13:44,745 [Worker-31: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: NaukriSelfupdate:NaukriProfileUpdatesAutomation:0.0.1-SNAPSHOT @ C:\NaukriApp\NaukriProfileAutoUpdate\NaukriProfileUpdatesAutomation\pom.xml.
+2025-03-30 22:13:47,876 [Worker-31: Building] ERROR o.e.m.j.i.l.MavenLaunchConfigurationListener - Could not update launch configuration
+org.eclipse.core.runtime.CoreException: File not found: C:\NaukriApp\NaukriProfileAutoUpdate\.metadata\.plugins\org.eclipse.debug.core.
+	at org.eclipse.core.internal.filesystem.Policy.error(Policy.java:32)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.mkdir(LocalFile.java:384)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.writeNewFile(LaunchConfigurationWorkingCopy.java:310)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave0(LaunchConfigurationWorkingCopy.java:259)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:229)
+	at org.eclipse.debug.internal.core.LaunchConfigurationWorkingCopy.doSave(LaunchConfigurationWorkingCopy.java:187)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.enable(MavenRuntimeClasspathProvider.java:398)
+	at org.eclipse.m2e.jdt.internal.launch.MavenRuntimeClasspathProvider.enable(MavenRuntimeClasspathProvider.java:427)
+	at org.eclipse.m2e.jdt.internal.launch.MavenLaunchConfigurationListener.mavenProjectChanged(MavenLaunchConfigurationListener.java:134)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.notifyProjectChangeListeners(ProjectRegistryManager.java:892)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.applyMutableProjectRegistry(ProjectRegistryManager.java:1042)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:324)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.getProjectFacade(MavenBuilder.java:146)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.lambda$0(MavenBuilder.java:84)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:458)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:339)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:278)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder$BuildMethod.execute(MavenBuilder.java:83)
+	at org.eclipse.m2e.core.internal.builder.MavenBuilder.build(MavenBuilder.java:192)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:1077)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:296)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:352)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:441)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:444)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:555)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:503)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:585)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:207)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:300)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.nio.file.NoSuchFileException: C:\NaukriApp\NaukriProfileAutoUpdate\.metadata\.plugins\org.eclipse.debug.core\.launches
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.createDirectory(WindowsFileSystemProvider.java:527)
+	at java.base/java.nio.file.Files.createDirectory(Files.java:699)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.mkdir(LocalFile.java:365)
+	... 30 common frames omitted
+2025-03-30 22:13:48,092 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NaukriApp\NaukriProfileAutoUpdate\NaukriProfileUpdatesAutomation\src\main\resources
+2025-03-30 22:13:48,098 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NaukriApp\NaukriProfileAutoUpdate\NaukriProfileUpdatesAutomation\src\test\resources
+2025-03-30 22:17:16,554 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NaukriApp\NaukriProfileAutoUpdate\NaukriProfileUpdatesAutomation\src\main\resources
+2025-03-30 22:17:16,561 [Worker-32: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NaukriApp\NaukriProfileAutoUpdate\NaukriProfileUpdatesAutomation\src\test\resources
+2025-03-30 22:17:44,143 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NaukriApp\NaukriProfileAutoUpdate\NaukriProfileUpdatesAutomation\src\main\resources
+2025-03-30 22:17:44,146 [Worker-31: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\NaukriApp\NaukriProfileAutoUpdate\NaukriProfileUpdatesAutomation\src\test\resources
+2025-03-30 22:18:08,488 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409 [297])
+2025-03-30 22:18:08,490 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409
+2025-03-30 22:18:08,491 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\aopalliance-1.0.jar
+2025-03-30 22:18:08,491 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\guice-5.1.0.jar
+2025-03-30 22:18:08,491 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpclient-4.5.14.jar
+2025-03-30 22:18:08,491 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\httpcore-4.4.16.jar
+2025-03-30 22:18:08,491 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jansi-2.4.1.jar
+2025-03-30 22:18:08,491 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\jcl-over-slf4j-1.7.36.jar
+2025-03-30 22:18:08,491 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-artifact-3.9.9.jar
+2025-03-30 22:18:08,491 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-builder-support-3.9.9.jar
+2025-03-30 22:18:08,493 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-compat-3.9.9.jar
+2025-03-30 22:18:08,493 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-core-3.9.9.jar
+2025-03-30 22:18:08,493 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-embedder-3.9.9.jar
+2025-03-30 22:18:08,493 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-3.9.9.jar
+2025-03-30 22:18:08,493 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-model-builder-3.9.9.jar
+2025-03-30 22:18:08,493 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-plugin-api-3.9.9.jar
+2025-03-30 22:18:08,493 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-repository-metadata-3.9.9.jar
+2025-03-30 22:18:08,493 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-api-1.9.22.jar
+2025-03-30 22:18:08,493 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-connector-basic-1.9.22.jar
+2025-03-30 22:18:08,493 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-impl-1.9.22.jar
+2025-03-30 22:18:08,493 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-named-locks-1.9.22.jar
+2025-03-30 22:18:08,494 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-provider-3.9.9.jar
+2025-03-30 22:18:08,494 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-spi-1.9.22.jar
+2025-03-30 22:18:08,494 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-file-1.9.22.jar
+2025-03-30 22:18:08,494 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-http-1.9.22.jar
+2025-03-30 22:18:08,494 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-transport-wagon-1.9.22.jar
+2025-03-30 22:18:08,494 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-resolver-util-1.9.22.jar
+2025-03-30 22:18:08,494 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-3.9.9.jar
+2025-03-30 22:18:08,494 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-settings-builder-3.9.9.jar
+2025-03-30 22:18:08,494 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\maven-shared-utils-3.4.2.jar
+2025-03-30 22:18:08,494 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.inject-0.9.0.M3.jar
+2025-03-30 22:18:08,494 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\org.eclipse.sisu.plexus-0.9.0.M3.jar
+2025-03-30 22:18:08,494 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-0.0.7.jar
+2025-03-30 22:18:08,494 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-build-api-1.2.0.jar
+2025-03-30 22:18:08,494 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-cipher-2.0.jar
+2025-03-30 22:18:08,495 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-classworlds-2.8.0.jar
+2025-03-30 22:18:08,495 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-component-annotations-2.1.0.jar
+2025-03-30 22:18:08,495 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-interpolation-1.27.jar
+2025-03-30 22:18:08,495 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-sec-dispatcher-2.0.jar
+2025-03-30 22:18:08,495 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-utils-3.5.1.jar
+2025-03-30 22:18:08,495 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\plexus-xml-3.0.1.jar
+2025-03-30 22:18:08,495 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-file-3.5.3.jar
+2025-03-30 22:18:08,495 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-3.5.3.jar
+2025-03-30 22:18:08,495 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-http-shared-3.5.3.jar
+2025-03-30 22:18:08,495 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.eclipse.m2e.maven.runtime_3.9.900.20240824-1409\jars\wagon-provider-api-3.5.3.jar
+2025-03-30 22:18:08,497 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava_33.3.0.jre [10])
+2025-03-30 22:18:08,498 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\com.google.guava_33.3.0.jre.jar
+2025-03-30 22:18:08,498 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=slf4j.api_2.0.16 [519])
+2025-03-30 22:18:08,498 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\slf4j.api_2.0.16.jar
+2025-03-30 22:18:08,498 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.inject.jakarta.inject-api_1.0.5 [22])
+2025-03-30 22:18:08,498 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\jakarta.inject.jakarta.inject-api_1.0.5.jar
+2025-03-30 22:18:08,498 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=jakarta.annotation-api_1.3.5 [20])
+2025-03-30 22:18:08,498 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\jakarta.annotation-api_1.3.5.jar
+2025-03-30 22:18:08,498 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.cli_1.9.0 [47])
+2025-03-30 22:18:08,499 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.apache.commons.cli_1.9.0.jar
+2025-03-30 22:18:08,499 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=org.apache.commons.commons-codec_1.16.0 [50])
+2025-03-30 22:18:08,499 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\org.apache.commons.commons-codec_1.16.0.jar
+2025-03-30 22:18:08,499 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - getClasspathEntries(Bundle=com.google.guava.failureaccess_1.0.2 [11])
+2025-03-30 22:18:08,499 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.eclipse.m2e.core.internal.Bundles - 	Entry: C:\Users\bharath\.p2\pool\plugins\com.google.guava.failureaccess_1.0.2.jar
+2025-03-30 22:18:08,504 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.e.m.i.launch.MavenLaunchDelegate - Run build in "C:\NaukriApp\NaukriProfileAutoUpdate\NaukriProfileUpdatesAutomation":
+2025-03-30 22:18:08,506 [Worker-27: Launching Executing test in C__NaukriApp_NaukriProfileAutoUpdate_NaukriProfileUpdatesAutomation] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -Dstyle.color=always test

@@ -107,11 +107,7 @@
 			<artifactId>monte-screen-recorder</artifactId>
 			<version>0.7.7.0</version>
 		</dependency>
-<<<<<<< HEAD
-		
 
-=======
->>>>>>> master
 		<!--
 		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
 		<dependency>
@@ -144,24 +140,18 @@
   </dependencies>
 <build>
     <plugins>
-<<<<<<< HEAD
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-compiler-plugin</artifactId>
-    <version>3.10.1</version>
-=======
+
        <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-compiler-plugin</artifactId>
     <version>3.11.0</version>  <!-- Ensure latest version -->
->>>>>>> master
     <configuration>
         <source>21</source>
         <target>21</target>
     </configuration>
 </plugin>
 
-<<<<<<< HEAD
+
 
 	    <plugin>
     <groupId>org.apache.maven.plugins</groupId>
@@ -183,8 +173,7 @@
                 <target>11</target>
             </configuration>
         </plugin>
-=======
->>>>>>> master
+
 
         <!-- Maven Surefire Plugin (Runs TestNG tests) -->
         <plugin>
@@ -196,10 +185,9 @@
                     <suiteXmlFile>testng.xml</suiteXmlFile>
                 </suiteXmlFiles>
             </configuration>
-<<<<<<< HEAD
+
         </plugin>  
-=======
-        </plugin>
+
 	    <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
@@ -211,7 +199,6 @@
     </configuration>
 </plugin>
 
->>>>>>> master
     </plugins>
 </build>
 
