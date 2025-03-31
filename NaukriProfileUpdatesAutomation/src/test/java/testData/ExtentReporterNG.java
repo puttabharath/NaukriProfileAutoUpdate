@@ -17,8 +17,8 @@ public class ExtentReporterNG {
             return extent; // Return existing instance to prevent duplicates
         }
 
-        // Get project directory dynamically
-        String reportDir = "C:\\NaukriApp\\NaukriProfileAutoUpdate\\NaukriProfileUpdatesAutomation\\reports\\";
+        // ✅ Use Jenkins-friendly directory
+        String reportDir = "C:\\JenkinsReports\\";
         File dir = new File(reportDir);
 
         // Ensure reports directory exists
@@ -31,7 +31,7 @@ public class ExtentReporterNG {
             }
         }
 
-        // Generate time stamped report file
+        // Generate timestamped report file
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
         String timestamp = LocalDateTime.now().format(formatter);
         String reportFile = "Naukri_Auto_Update_Profile_" + timestamp + ".html";
@@ -55,24 +55,24 @@ public class ExtentReporterNG {
 
         System.out.println("✅ Extent Reports initialized at: " + reportPath);
 
-        // Copy latest report as 'latest.html' for easy access
-        try 
-        {
+        // ✅ Ensure latest.html is updated properly for Jenkins
+        try {
             Path latestReportPath = Paths.get(reportDir + "latest.html");
+
+            // Delete old latest.html if it exists
             Files.deleteIfExists(latestReportPath);
+
+            // Copy latest report as 'latest.html'
             Files.copy(Paths.get(reportPath), latestReportPath, StandardCopyOption.REPLACE_EXISTING);
-            
-            // Ensure file is created before Jenkins picks it up
-            try {
-                Thread.sleep(20000); // Small delay to ensure file writing completes
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+
+            // ✅ Explicitly set read permissions (for Jenkins)
+            latestReportPath.toFile().setReadable(true, false);
+
+            // ✅ Ensure file is completely written before Jenkins reads it
+            Thread.sleep(5000); // Short delay for safety
             
             System.out.println("✅ Latest report copied to: " + latestReportPath);
-        } 
-        catch (IOException e)
-        {
+        } catch (IOException | InterruptedException e) {
             System.err.println("❌ Could not create latest.html file: " + e.getMessage());
         }
 
