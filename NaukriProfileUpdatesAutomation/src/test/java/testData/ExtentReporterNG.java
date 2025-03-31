@@ -12,24 +12,19 @@ public class ExtentReporterNG {
 
     public static ExtentReports getReportObject() {
         if (extent != null) {
-            return extent; // Return existing instance to prevent duplicates
+            return extent; // Prevent duplicate instances
         }
 
-        // ✅ Use the direct Jenkins-friendly directory
-        String reportDir = "C:\\JenkinsReports\\";
+        // ✅ Use Jenkins workspace-friendly directory
+        String reportDir = System.getProperty("user.dir") + "/test-output/ExtentReports/";
         File dir = new File(reportDir);
 
         // Ensure reports directory exists
-        if (!dir.exists()) {
-            boolean created = dir.mkdirs();
-            if (created) {
-                System.out.println("✅ Reports directory created: " + reportDir);
-            } else {
-                System.err.println("❌ Failed to create reports directory!");
-            }
+        if (!dir.exists() && !dir.mkdirs()) {
+            System.err.println("❌ Failed to create reports directory: " + reportDir);
         }
 
-        // Generate timestamped report file (No 'latest.html' copying)
+        // Generate timestamped report file
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss");
         String timestamp = LocalDateTime.now().format(formatter);
         String reportFile = "Naukri_Auto_Update_Profile_" + timestamp + ".html";
@@ -53,10 +48,10 @@ public class ExtentReporterNG {
 
         System.out.println("✅ Extent Reports initialized at: " + reportPath);
 
-        // ✅ Wait for 10 seconds to ensure the report is created
+        // ✅ Wait for 15 seconds to ensure the report is created
         try {
-            Thread.sleep(10000); // Wait for 10 seconds
-            System.out.println("✅ 10-second wait completed. Report should be ready.");
+            Thread.sleep(15000); // Wait 15 seconds
+            System.out.println("✅ 15-second wait completed. Report should be ready.");
         } catch (InterruptedException e) {
             System.err.println("❌ Thread sleep interrupted: " + e.getMessage());
         }
