@@ -16,6 +16,14 @@
 
   <dependencies>
  
+    <dependency>
+        <groupId>org.uncommons</groupId>
+        <artifactId>reportng</artifactId>
+        <version>1.1.4</version>
+        <scope>test</scope>
+    </dependency>
+
+
     <!-- ByteBuddy (Explicitly add it if missing) -->
     <dependency>
         <groupId>net.bytebuddy</groupId>
