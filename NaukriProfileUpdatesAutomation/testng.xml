@@ -3,8 +3,6 @@
 <suite name="Suite">
 <listeners>
     <listener class-name="listeners.Listener"/>
-    <listener class-name="org.uncommons.reportng.HTMLReporter" />
-    <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 </listeners>
 
   <test thread-count="5" name="Test">
@@ -16,3 +14,4 @@
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
+
