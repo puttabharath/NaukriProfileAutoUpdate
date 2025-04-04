@@ -15,7 +15,7 @@ public class ExtentReporterNG {
             return extent; // Prevent duplicate instances
         }
 
-        // ✅ Use Jenkins workspace-friendly directory
+        // Use Jenkins workspace-friendly directory
         String reportDir = System.getProperty("user.dir") + "/test-output/ExtentReports/";
         File dir = new File(reportDir);
 
