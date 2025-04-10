@@ -21,6 +21,7 @@ public class skillUpdateTest extends BaseClass{
 
 	        // Perform login
 	        loginPage.naukriLoginPortal(username, password);
+	        
 		skillsUpdate skill = new skillsUpdate(driver);
 				skill.addDeleteSkills();
 	}

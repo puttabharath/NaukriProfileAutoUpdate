@@ -11,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 public class skillsUpdate {
@@ -39,6 +40,7 @@ public class skillsUpdate {
     
     public void addDeleteSkills() throws InterruptedException {
     	
+    	Reporter.log("Skills module is initiated",true);
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     	wait.until(ExpectedConditions.elementToBeClickable(editIconKeySkills)).click();
     	
@@ -59,9 +61,6 @@ public class skillsUpdate {
        }
        
        saveBtn.click();
-       
-       
-
-
+       Reporter.log("Skills module is validated successfully",true);
     }
 }

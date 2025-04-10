@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.LoginTest">
+      <class name="test.BasicDetailsEditTest">
         <methods>
           <include name="teardown"/>
-          <include name="validLogin"/>
-          <include name="invalidUsernameVPassword"/>
           <include name="setup"/>
-          <include name="userNameInvalidPassword"/>
+          <include name="naukriBasicDetailsTest"/>
         </methods>
-      </class> <!-- test.LoginTest -->
+      </class> <!-- test.BasicDetailsEditTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

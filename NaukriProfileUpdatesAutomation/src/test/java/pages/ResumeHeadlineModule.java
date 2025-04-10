@@ -11,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Reporter;
 
 public class ResumeHeadlineModule {
 	
@@ -38,6 +39,7 @@ public class ResumeHeadlineModule {
     	jse.executeScript("window.scrollBy(300,400)");
 		Thread.sleep(4000);
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+		Reporter.log("Resume Headline module is initiated",true);
 		
 		wait.until(ExpectedConditions.elementToBeClickable(resumeHeaderEditIcon)).click();
         Robot robot = new Robot();
@@ -54,6 +56,7 @@ public class ResumeHeadlineModule {
        
         resumeHeaderinputfield.sendKeys(Keys.chord(Keys.CONTROL, "v")); // Paste action
 	     saveButton.click();
+	     Reporter.log("Resume headline module is validated successfully",true);
 	}
 
 }
