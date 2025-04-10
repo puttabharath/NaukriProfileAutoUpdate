@@ -44,6 +44,7 @@ public class BasicDetailsEdit {
 		wait.until(ExpectedConditions.visibilityOf(NameField)).sendKeys("Bharath Kumar Putta@12");
 		Reporter.log("Entered invalid data in the name field",true);
 		wait.until(ExpectedConditions.elementToBeClickable(savebtn)).click();
+		Thread.sleep(2000); // given time for error to appear
 	 String errorMessageUserNameField = wait.until(ExpectedConditions.visibilityOf(nameErrorNameField)).getText();
 	 String expectedErrorMessage = "Special characters other than Space( ) SingleQuote(') Dot(.) are not allowed.";
      SoftAssert sa = new SoftAssert();
