@@ -23,7 +23,7 @@ public class BasicDetailsEdit {
     @FindBy(xpath = "//a[@data-id='exp-years-droope_2']") private WebElement expDropdown2;
     @FindBy(xpath = "//span[@data-id='1']") private WebElement availToJoinoptn;
     @FindBy(id = "saveBasicDetailsBtn") private WebElement savebtn;
-    @FindBy(id = "name_err") private WebElement nameErrorNameField;
+    @FindBy(xpath = "//div[@class='err-container']/span[@id='name_err']") private WebElement nameErrorNameField;
     @FindBy(xpath = "//span[@class='fullname']") private WebElement fullname;
     @FindBy(xpath = "//div[@data-ga-track='spa-event|EditProfile|BasicDetails|Cancel']/span") private WebElement crossBtn;
 
@@ -45,7 +45,8 @@ public class BasicDetailsEdit {
         Reporter.log("Entered invalid data in the name field", true);
         wait.until(ExpectedConditions.elementToBeClickable(savebtn)).click();
         Thread.sleep(4000); // wait for error
-        String errorMessageUserNameField = wait.until(ExpectedConditions.visibilityOf(nameErrorNameField)).getText();
+        WebDriverWait wait1 = new WebDriverWait(driver,Duration.ofSeconds(25));
+        String errorMessageUserNameField = wait1.until(ExpectedConditions.visibilityOf(nameErrorNameField)).getText();
         String expectedErrorMessage = "Special characters other than Space( ) SingleQuote(') Dot(.) are not allowed.";
         SoftAssert sa = new SoftAssert();
         sa.assertEquals(errorMessageUserNameField, expectedErrorMessage);
