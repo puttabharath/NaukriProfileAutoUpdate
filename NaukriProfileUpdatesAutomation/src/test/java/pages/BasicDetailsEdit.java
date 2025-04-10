@@ -55,6 +55,7 @@ public class BasicDetailsEdit {
         Reporter.log("Basic details module is validated with invalid data", true);
     }
 
+    
     // Verify valid name input
     public void nameInputFieldValid() throws Throwable {
         Reporter.log("Naukri input field module is initiated with valid data", true);
