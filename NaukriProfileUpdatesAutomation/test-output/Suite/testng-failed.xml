@@ -8,9 +8,11 @@
     <classes>
       <class name="test.BasicDetailsEditTest">
         <methods>
+          <include name="naukriBasicDetailsInvalid"/>
           <include name="teardown"/>
           <include name="setup"/>
           <include name="naukriBasicDetailsTest"/>
+          <include name="naukriBasicDetailsValid"/>
         </methods>
       </class> <!-- test.BasicDetailsEditTest -->
     </classes>

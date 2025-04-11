@@ -5,9 +5,9 @@
     <classes>
       <class name="test.BasicDetailsEditTest">
         <methods>
+          <include name="naukriBasicDetailsInvalid"/>
           <include name="teardown"/>
           <include name="setup"/>
-          <include name="naukriBasicDetailsTest"/>
         </methods>
       </class> <!-- test.BasicDetailsEditTest -->
     </classes>

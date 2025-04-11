@@ -18,6 +18,7 @@ public class ProfileUpdation {
 	public ProfileUpdation(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	}
 
 	@FindBy(xpath = "//div[@class='nI-gNb-drawer__icon']/div[1]")
@@ -35,36 +36,51 @@ public class ProfileUpdation {
 	@FindBy(xpath = "//span[text()='Upload resume']")
 	private WebElement updateResumeBtn;
 
-	@FindBy(xpath = "//input[@type='file']") // Ensure this matches the actual file input field
+	@FindBy(xpath = "//input[@type='file']")
 	private WebElement fileUploadInput;
 
-	public void profileUpdateModule() throws Throwable {
-		Reporter.log("Profile update module is initiated",true);
-		wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-		WebElement moreOptions = wait.until(ExpectedConditions.elementToBeClickable(threeDots));
-		moreOptions.click();
+	public void profileUpdateModule() {
 		try {
-			WebElement chatWindow = driver.findElement(By.id("chatList__9cf184asaMessages"));
+			Reporter.log("Profile update module is initiated", true);
+
+			// Click on the three dots menu
+			wait.until(ExpectedConditions.elementToBeClickable(threeDots)).click();
+
+			// Close chat window if it appears
+			hideChatWindowIfPresent();
+
+			// Click 'View & Update Profile'
+			wait.until(ExpectedConditions.elementToBeClickable(viewUpdateProfile)).click();
+
+			// Delete existing resume
+			wait.until(ExpectedConditions.elementToBeClickable(deleteIcon)).click();
+			wait.until(ExpectedConditions.elementToBeClickable(deletePopupBtn)).click();
+			Reporter.log("Resume got deleted", true);
+
+			// Upload new resume
+			wait.until(ExpectedConditions.elementToBeClickable(updateResumeBtn)).click();
+
+			String filePath = System.getProperty("user.dir") +
+					"\\src\\test\\java\\testData\\Resume\\Bharath Kumar Putta Resume.pdf";
+			wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='file']")));
+			fileUploadInput.sendKeys(filePath);
+
+			// Wait for the file to upload (can be improved with visual confirmation if available)
+			Thread.sleep(2000);
+
+			Reporter.log("Updated latest Resume", true);
+		} catch (Exception e) {
+			Reporter.log("Profile update failed: " + e.getMessage(), true);
+			e.printStackTrace();
+		}
+	}
+
+	private void hideChatWindowIfPresent() {
+		try {
+			WebElement chatWindow = driver.findElement(By.xpath("//div[contains(@id,'chatList')]"));
 			((JavascriptExecutor) driver).executeScript("arguments[0].style.display='none';", chatWindow);
 		} catch (Exception e) {
 			System.out.println("No chat window found");
 		}
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement element = wait
-				.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='View & Update Profile']")));
-		element.click();
-		deleteIcon.click();
-		deletePopupBtn.click();
-		Reporter.log("Resume got deleted",true);
-
-		WebElement updateResume = wait.until(ExpectedConditions.elementToBeClickable(updateResumeBtn));
-		updateResume.click();
-		// Upload file using sendKeys
-		String filePath = "C:\\NaukriApp\\NaukriProfileAutoUpdate\\NaukriProfileUpdatesAutomation\\src\\test\\java\\testData\\Resume\\Bharath Kumar Putta Resume.pdf";
-		fileUploadInput.sendKeys(filePath);
-
-		// Wait for upload to complete
-		Thread.sleep(2000);
-		Reporter.log("Updated latest Resume",true);
 	}
 }
