@@ -3,6 +3,7 @@ package pages;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Collections;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -22,12 +23,15 @@ public class BaseClass {
     
     public void setup() throws IOException {    
         ChromeOptions options = new ChromeOptions();
-        //options.addArguments("--headless=new"); // Headless mode
-        options.addArguments("--window-size=1920,1080"); // Set viewport size
+        options.addArguments("--headless=new"); // Headless mode
+        options.addArguments("--window-size=1920,1080"); // Set the browser resolution size
         options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
-        options.addArguments("--disable-gpu"); 
-        options.addArguments("--no-sandbox"); 
-        options.addArguments("--disable-dev-shm-usage"); 
+        options.addArguments("--disable-gpu"); // disables GPU hardware acceleration. Improves compatibility in headless mode
+        options.addArguments("--no-sandbox"); //disables the chrome sandbox security feature
+        //32 and 33 lines will remove the automated chrome browser message on chrome browser.
+        options.setExperimentalOption("useAutomationExtension", false);
+        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+        options.addArguments("--disable-dev-shm-usage"); //
         options.addArguments("--disable-popup-blocking"); // Prevent pop-ups blocking
         options.addArguments("--start-maximized");
         options.addArguments("--incognito");
