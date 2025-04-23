@@ -2,13 +2,49 @@
 <testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[Profile update module is initiated]]>
+      <![CDATA[STEP 1: Initiating profile update module]]>
     </line>
     <line>
-      <![CDATA[Resume got deleted]]>
+      <![CDATA[STEP 2: Clicking on the menu (three dots)]]>
     </line>
     <line>
-      <![CDATA[Updated latest Resume]]>
+      <![CDATA[STEP 3: Checking and hiding chat window if present]]>
+    </line>
+    <line>
+      <![CDATA[✔ No chat window found to hide]]>
+    </line>
+    <line>
+      <![CDATA[STEP 4: Clicking on 'View & Update Profile']]>
+    </line>
+    <line>
+      <![CDATA[STEP 5: Waiting for any loading overlays to disappear]]>
+    </line>
+    <line>
+      <![CDATA[✔ Loader disappeared, proceeding]]>
+    </line>
+    <line>
+      <![CDATA[STEP 6: Scrolling to the 'Delete Resume' icon]]>
+    </line>
+    <line>
+      <![CDATA[✔ Scrolled to the element successfully]]>
+    </line>
+    <line>
+      <![CDATA[STEP 7: Clicking the 'Delete Resume' icon]]>
+    </line>
+    <line>
+      <![CDATA[STEP 8: Clicking the confirmation 'Delete' button on popup]]>
+    </line>
+    <line>
+      <![CDATA[✔ Resume successfully deleted]]>
+    </line>
+    <line>
+      <![CDATA[STEP 9: Clicking 'Upload Resume' button]]>
+    </line>
+    <line>
+      <![CDATA[STEP 10: Uploading new resume]]>
+    </line>
+    <line>
+      <![CDATA[✔ Resume uploaded successfully]]>
     </line>
     <line>
       <![CDATA[Resume Headline module is initiated]]>
@@ -33,6 +69,9 @@
     </line>
     <line>
       <![CDATA[Entered invalid data in the name field]]>
+    </line>
+    <line>
+      <![CDATA[Click intercepted, trying JS click]]>
     </line>
     <line>
       <![CDATA[Basic details module is validated with invalid data]]>
@@ -65,16 +104,16 @@
       <![CDATA[Basic details saved successfully]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-04-22T23:00:01 IST" name="Suite" finished-at="2025-04-22T23:01:46 IST" duration-ms="104277">
+  <suite started-at="2025-04-23T11:13:34 IST" name="Suite" finished-at="2025-04-23T11:15:12 IST" duration-ms="98097">
     <groups>
     </groups>
-    <test started-at="2025-04-22T23:00:01 IST" name="Test" finished-at="2025-04-22T23:01:46 IST" duration-ms="104277">
+    <test started-at="2025-04-23T11:13:34 IST" name="Test" finished-at="2025-04-23T11:15:12 IST" duration-ms="98097">
       <class name="test.skillUpdateTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.skillUpdateTest@74f6c5d8]" started-at="2025-04-22T23:00:58 IST" name="setup" finished-at="2025-04-22T23:01:03 IST" duration-ms="4592" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.skillUpdateTest@74f6c5d8]" started-at="2025-04-23T11:14:25 IST" name="setup" finished-at="2025-04-23T11:14:29 IST" duration-ms="4368" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="skillUpdationTest()[pri:3, instance:test.skillUpdateTest@74f6c5d8]" started-at="2025-04-22T23:01:03 IST" name="skillUpdationTest" description="Verify the functionality by removing and adding the any skill in the Skills Section" finished-at="2025-04-22T23:01:13 IST" duration-ms="10558" status="PASS">
+        <test-method signature="skillUpdationTest()[pri:3, instance:test.skillUpdateTest@74f6c5d8]" started-at="2025-04-23T11:14:29 IST" name="skillUpdationTest" description="Verify the functionality by removing and adding the any skill in the Skills Section" finished-at="2025-04-23T11:14:40 IST" duration-ms="10180" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Skills module is initiated]]>
@@ -84,17 +123,17 @@
             </line>
           </reporter-output>
         </test-method> <!-- skillUpdationTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.skillUpdateTest@74f6c5d8]" started-at="2025-04-22T23:01:14 IST" name="teardown" finished-at="2025-04-22T23:01:14 IST" duration-ms="211" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.skillUpdateTest@74f6c5d8]" started-at="2025-04-23T11:14:40 IST" name="teardown" finished-at="2025-04-23T11:14:40 IST" duration-ms="118" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- test.skillUpdateTest -->
       <class name="test.ResumeHeadlineTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.ResumeHeadlineTest@102cec62]" started-at="2025-04-22T23:00:43 IST" name="setup" finished-at="2025-04-22T23:00:48 IST" duration-ms="4868" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.ResumeHeadlineTest@102cec62]" started-at="2025-04-23T11:14:10 IST" name="setup" finished-at="2025-04-23T11:14:15 IST" duration-ms="5199" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="resumeHeadlineTest()[pri:4, instance:test.ResumeHeadlineTest@102cec62]" started-at="2025-04-22T23:00:48 IST" name="resumeHeadlineTest" description="Verify the functionality by removing and adding the resume headline text" finished-at="2025-04-22T23:00:57 IST" duration-ms="9563" status="PASS">
+        <test-method signature="resumeHeadlineTest()[pri:4, instance:test.ResumeHeadlineTest@102cec62]" started-at="2025-04-23T11:14:15 IST" name="resumeHeadlineTest" description="Verify the functionality by removing and adding the resume headline text" finished-at="2025-04-23T11:14:25 IST" duration-ms="9263" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Resume Headline module is initiated]]>
@@ -104,17 +143,17 @@
             </line>
           </reporter-output>
         </test-method> <!-- resumeHeadlineTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ResumeHeadlineTest@102cec62]" started-at="2025-04-22T23:00:58 IST" name="teardown" finished-at="2025-04-22T23:00:58 IST" duration-ms="150" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ResumeHeadlineTest@102cec62]" started-at="2025-04-23T11:14:25 IST" name="teardown" finished-at="2025-04-23T11:14:25 IST" duration-ms="150" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- test.ResumeHeadlineTest -->
       <class name="test.BasicDetailsEditTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.BasicDetailsEditTest@27912e3]" started-at="2025-04-22T23:01:14 IST" name="setup" finished-at="2025-04-22T23:01:18 IST" duration-ms="4292" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.BasicDetailsEditTest@27912e3]" started-at="2025-04-23T11:14:40 IST" name="setup" finished-at="2025-04-23T11:14:44 IST" duration-ms="4545" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="naukriBasicDetailsInvalid()[pri:5, instance:test.BasicDetailsEditTest@27912e3]" started-at="2025-04-22T23:01:18 IST" name="naukriBasicDetailsInvalid" description="Verify the functionality by giving invalid (Bharath@12) in the username input field" finished-at="2025-04-22T23:01:32 IST" duration-ms="14349" status="PASS">
+        <test-method signature="naukriBasicDetailsInvalid()[pri:5, instance:test.BasicDetailsEditTest@27912e3]" started-at="2025-04-23T11:14:44 IST" name="naukriBasicDetailsInvalid" description="Verify the functionality by giving invalid (Bharath@12) in the username input field" finished-at="2025-04-23T11:14:59 IST" duration-ms="14906" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Naukri basic details module is initiated]]>
@@ -129,11 +168,14 @@
               <![CDATA[Entered invalid data in the name field]]>
             </line>
             <line>
+              <![CDATA[Click intercepted, trying JS click]]>
+            </line>
+            <line>
               <![CDATA[Basic details module is validated with invalid data]]>
             </line>
           </reporter-output>
         </test-method> <!-- naukriBasicDetailsInvalid -->
-        <test-method signature="naukriBasicDetailsValid()[pri:6, instance:test.BasicDetailsEditTest@27912e3]" started-at="2025-04-22T23:01:33 IST" name="naukriBasicDetailsValid" description="Verify the functionality by giving valid data in the username Input field" finished-at="2025-04-22T23:01:42 IST" duration-ms="9792" status="PASS">
+        <test-method signature="naukriBasicDetailsValid()[pri:6, instance:test.BasicDetailsEditTest@27912e3]" started-at="2025-04-23T11:15:00 IST" name="naukriBasicDetailsValid" description="Verify the functionality by giving valid data in the username Input field" finished-at="2025-04-23T11:15:09 IST" duration-ms="9943" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Naukri input field module is initiated with valid data]]>
@@ -149,7 +191,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- naukriBasicDetailsValid -->
-        <test-method signature="naukriBasicDetailsTest()[pri:7, instance:test.BasicDetailsEditTest@27912e3]" started-at="2025-04-22T23:01:43 IST" name="naukriBasicDetailsTest" description="Verify the functionality by removing and adding the basic details in Naukri profile" finished-at="2025-04-22T23:01:45 IST" duration-ms="2549" status="PASS">
+        <test-method signature="naukriBasicDetailsTest()[pri:7, instance:test.BasicDetailsEditTest@27912e3]" started-at="2025-04-23T11:15:10 IST" name="naukriBasicDetailsTest" description="Verify the functionality by removing and adding the basic details in Naukri profile" finished-at="2025-04-23T11:15:12 IST" duration-ms="2319" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Naukri input basic details with exp year and joining date]]>
@@ -168,44 +210,80 @@
             </line>
           </reporter-output>
         </test-method> <!-- naukriBasicDetailsTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.BasicDetailsEditTest@27912e3]" started-at="2025-04-22T23:01:45 IST" name="teardown" finished-at="2025-04-22T23:01:46 IST" duration-ms="167" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.BasicDetailsEditTest@27912e3]" started-at="2025-04-23T11:15:12 IST" name="teardown" finished-at="2025-04-23T11:15:12 IST" duration-ms="168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- test.BasicDetailsEditTest -->
       <class name="test.LoginTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.LoginTest@4bc222e]" started-at="2025-04-22T23:00:01 IST" name="setup" finished-at="2025-04-22T23:00:08 IST" duration-ms="6367" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.LoginTest@4bc222e]" started-at="2025-04-23T11:13:34 IST" name="setup" finished-at="2025-04-23T11:13:38 IST" duration-ms="4347" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validLogin()[pri:1, instance:test.LoginTest@4bc222e]" started-at="2025-04-22T23:00:08 IST" name="validLogin" description="Verify the functionality by giving valid username and password" finished-at="2025-04-22T23:00:13 IST" duration-ms="5388" status="PASS">
+        <test-method signature="validLogin()[pri:1, instance:test.LoginTest@4bc222e]" started-at="2025-04-23T11:13:38 IST" name="validLogin" description="Verify the functionality by giving valid username and password" finished-at="2025-04-23T11:13:42 IST" duration-ms="3929" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLogin -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.LoginTest@4bc222e]" started-at="2025-04-22T23:00:13 IST" name="teardown" finished-at="2025-04-22T23:00:14 IST" duration-ms="1046" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.LoginTest@4bc222e]" started-at="2025-04-23T11:13:43 IST" name="teardown" finished-at="2025-04-23T11:13:43 IST" duration-ms="278" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- test.LoginTest -->
       <class name="test.ProfileUpdationTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:test.ProfileUpdationTest@56dc1551]" started-at="2025-04-22T23:00:14 IST" name="setup" finished-at="2025-04-22T23:00:20 IST" duration-ms="5288" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:test.ProfileUpdationTest@56dc1551]" started-at="2025-04-23T11:13:43 IST" name="setup" finished-at="2025-04-23T11:13:47 IST" duration-ms="4418" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="profileUpdate()[pri:2, instance:test.ProfileUpdationTest@56dc1551]" started-at="2025-04-22T23:00:20 IST" name="profileUpdate" description="Verify the functionality by adding and removing the resume file in Profile section" finished-at="2025-04-22T23:00:42 IST" duration-ms="22711" status="PASS">
+        <test-method signature="profileUpdate()[pri:2, instance:test.ProfileUpdationTest@56dc1551]" started-at="2025-04-23T11:13:47 IST" name="profileUpdate" description="Verify the functionality by adding and removing the resume file in Profile section" finished-at="2025-04-23T11:14:10 IST" duration-ms="22566" status="PASS">
           <reporter-output>
             <line>
-              <![CDATA[Profile update module is initiated]]>
+              <![CDATA[STEP 1: Initiating profile update module]]>
             </line>
             <line>
-              <![CDATA[Resume got deleted]]>
+              <![CDATA[STEP 2: Clicking on the menu (three dots)]]>
             </line>
             <line>
-              <![CDATA[Updated latest Resume]]>
+              <![CDATA[STEP 3: Checking and hiding chat window if present]]>
+            </line>
+            <line>
+              <![CDATA[✔ No chat window found to hide]]>
+            </line>
+            <line>
+              <![CDATA[STEP 4: Clicking on 'View & Update Profile']]>
+            </line>
+            <line>
+              <![CDATA[STEP 5: Waiting for any loading overlays to disappear]]>
+            </line>
+            <line>
+              <![CDATA[✔ Loader disappeared, proceeding]]>
+            </line>
+            <line>
+              <![CDATA[STEP 6: Scrolling to the 'Delete Resume' icon]]>
+            </line>
+            <line>
+              <![CDATA[✔ Scrolled to the element successfully]]>
+            </line>
+            <line>
+              <![CDATA[STEP 7: Clicking the 'Delete Resume' icon]]>
+            </line>
+            <line>
+              <![CDATA[STEP 8: Clicking the confirmation 'Delete' button on popup]]>
+            </line>
+            <line>
+              <![CDATA[✔ Resume successfully deleted]]>
+            </line>
+            <line>
+              <![CDATA[STEP 9: Clicking 'Upload Resume' button]]>
+            </line>
+            <line>
+              <![CDATA[STEP 10: Uploading new resume]]>
+            </line>
+            <line>
+              <![CDATA[✔ Resume uploaded successfully]]>
             </line>
           </reporter-output>
         </test-method> <!-- profileUpdate -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ProfileUpdationTest@56dc1551]" started-at="2025-04-22T23:00:42 IST" name="teardown" finished-at="2025-04-22T23:00:43 IST" duration-ms="247" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:test.ProfileUpdationTest@56dc1551]" started-at="2025-04-23T11:14:10 IST" name="teardown" finished-at="2025-04-23T11:14:10 IST" duration-ms="197" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
