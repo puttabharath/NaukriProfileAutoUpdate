@@ -10,7 +10,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class naukritesting {
 	
-	 @FindBy(xpath = "//span[text()='Key skills']")
+	    @FindBy(xpath = "//span[text()='Key skills']")
 	    private WebElement keySkillsElement;
 
 	    @FindBy(id = "keySkillSugg")
@@ -21,7 +21,6 @@ public class naukritesting {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-	
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--incognito");
 		WebDriver driver = new ChromeDriver(options);
@@ -35,5 +34,3 @@ public class naukritesting {
 		Thread.sleep(3000);
 		
 	}}
-
-

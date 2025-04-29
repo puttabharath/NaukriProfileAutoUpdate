@@ -1,7 +1,6 @@
 package test;
 
 import org.testng.annotations.Test;
-
 import listeners.RetryAnalyzer;
 import pages.BaseClass;
 import pages.BasicDetailsEdit;

@@ -7,7 +7,6 @@ import pages.ProfileUpdation;
 import utils.ConfigReader;
 import listeners.*;
 
-
 public class ProfileUpdationTest extends BaseClass{
 	
 	@Test(priority = 2, retryAnalyzer = RetryAnalyzer.class, 
