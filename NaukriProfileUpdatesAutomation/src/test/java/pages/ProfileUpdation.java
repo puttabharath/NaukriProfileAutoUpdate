@@ -78,7 +78,7 @@ public class ProfileUpdation {
             // Step 8: Upload new resume
             Reporter.log("STEP 10: Uploading new resume", true);
             String filePath = System.getProperty("user.dir") +
-                    "\\src\\test\\java\\testData\\Resume\\Jagadeesh_Resume.pdf";
+                    "\\src\\test\\java\\testData\\Resume\\Bharath Kumar Putta Resume.pdf";
             wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='file']")));
             fileUploadInput.sendKeys(filePath);
 
