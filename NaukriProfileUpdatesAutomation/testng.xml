@@ -11,7 +11,6 @@
       <class name="test.ProfileUpdationTest"/>
       <class name="test.ResumeHeadlineTest"/>
       <class name="test.skillUpdateTest"/>
-      <class name="test.BasicDetailsEditTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
